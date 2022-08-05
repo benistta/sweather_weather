@@ -7,7 +7,7 @@ class ForecastService
         faraday.params["location"] = location
       end
       json = JSON.parse(response.body, symbolize_names: true)
-      require "pry"; binding.pry
+      # require "pry"; binding.pry
     end
 
     def mapquest_connection
