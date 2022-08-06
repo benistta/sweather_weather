@@ -24,7 +24,7 @@ class ForecastService
 
       end
       json = JSON.parse(response.body, symbolize_names: true)
-      # require "pry"; binding.pry
+      require "pry"; binding.pry
     end
 
     def connection_mapquest
