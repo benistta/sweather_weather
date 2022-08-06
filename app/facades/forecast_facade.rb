@@ -4,10 +4,10 @@ class ForecastFacade
       weather = ForecastService.get_all_forecast(location)
       # require "pry"; binding.pry
 
-      current_forecast = CurrentWeather.new(weather[:current])
+      current_forecast = CurrentForecast.new(weather[:current])
       daily_forecast = find_daily_forecast(weather[:daily])
       hourly_forecast = find_hourly_forecast(weather[:hourly])
-      
+
       [current_forecast, daily_forecast, hourly_forecast]
       # require "pry"; binding.pry
     end
