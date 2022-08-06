@@ -8,22 +8,22 @@ class ForecastService
       end
       json = JSON.parse(response.body, symbolize_names: true)
       # require "pry"; binding.pry
-      latitude = json_2[:results].first[:locations].first[:latLng][:lat]
-      longitude = json_2[:results].first[:locations].first[:latLng][:lng]
+      latitude = json[:results].first[:locations].first[:latLng][:lat]
+      longitude = json[:results].first[:locations].first[:latLng][:lng]
 
       get_weather(latitude, longitude)
     end
 
     def get_weather(latitude, longitude)
-    end_point2 = "/data/2.5/onecall"
-      response = connection_openweather.get(end_point2) do |faraday|
+    end_point = "/data/2.5/onecall"
+      response = connection_openweather.get(end_point) do |faraday|
         faraday.params["appid"] = ENV["FORECAST_API_KEY"]
         faraday.params["lat"] = latitude
         faraday.params["lon"] = longitude
         faraday.params['units'] = 'imperial'
 
       end
-      json_2 = JSON.parse(response.body, symbolize_names: true)
+      json = JSON.parse(response.body, symbolize_names: true)
       # require "pry"; binding.pry
     end
 
