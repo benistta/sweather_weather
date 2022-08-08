@@ -1,0 +1,320 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/facades/forecast_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          3,
+          null,
+          null,
+          3,
+          3,
+          3,
+          null,
+          3,
+          null,
+          null,
+          null,
+          1,
+          4,
+          20,
+          null,
+          null,
+          null,
+          1,
+          4,
+          32,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/poros/current_forecast.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/poros/daily_forecast.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/poros/hourly_forecast.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          34,
+          34,
+          34,
+          34,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/services/forecast_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          8,
+          8,
+          8,
+          8,
+          null,
+          8,
+          null,
+          8,
+          8,
+          null,
+          8,
+          null,
+          null,
+          1,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          null,
+          null,
+          8,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/services/base_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          8,
+          8,
+          null,
+          null,
+          1,
+          8,
+          8,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/controllers/api/v1/forecast_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/serializers/api/v1/forecast_serializer.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          16,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/beckynisttahuz/turing/3mod/final_sweater_weather/sweather_weather/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1659922601
+  }
+}
