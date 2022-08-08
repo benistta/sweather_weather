@@ -6,6 +6,7 @@ class Yelp
     # require "pry"; binding.pry
     @name = data[:name]
     @address = full_address(data)
+    # require "pry"; binding.pry
   end
 
   def full_address(data)
