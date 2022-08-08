@@ -42,23 +42,5 @@ RSpec.describe CurrentForecast do
     expect(current_forecast_object.visibility).to eq(10000)
     expect(current_forecast_object.conditions).to eq("few clouds")
     expect(current_forecast_object.icon).to eq("02d")
-
-    # expect(current_forecast_object.forecast).to have_key(:temperature)
-    # expect(current_forecast_object.forecast).to have_key(:summary)
-    #
-    # expect(current_forecast_object.forecast).to_not have_key(:datetime)
-    # expect(current_forecast_object.forecast).to_not have_key(:sunrise)
-    # expect(current_forecast_object.forecast).to_not have_key(:sunset)
-    # expect(current_forecast_object.forecast).to_not have_key(:feels_like)
-    # expect(current_forecast_object.forecast).to_not have_key(:humidity)
-    # expect(current_forecast_object.forecast).to_not have_key(:uvi)
-    # expect(current_forecast_object.forecast).to_not have_key(:visibility)
-    # expect(current_forecast_object.forecast).to_not have_key(:icon)
-    # expect(current_forecast_object.forecast).to_not have_key(:pressure)
-    # expect(current_forecast_object.forecast).to_not have_key(:dew_point)
-    # expect(current_forecast_object.forecast).to_not have_key(:wind_speed)
-    # expect(current_forecast_object.forecast).to_not have_key(:wind_deg)
-    # expect(current_forecast_object.forecast).to_not have_key(:id)
-    # expect(current_forecast_object.forecast).to_not have_key(:main)
   end
 end

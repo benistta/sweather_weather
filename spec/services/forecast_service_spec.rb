@@ -9,11 +9,9 @@ RSpec.describe ForecastService do
   end
 
   it 'returns  current forecast data', :vcr do
-    # forecast = ForecastService.get_all_forecast('denver,co')
-    # require "pry"; binding.pry
     expect(@forecast).to be_a(Hash)
     expect(@forecast).to have_key(:lat)
-    # expect(@forecast).to_not have_key(:minutely)
+    expect(@forecast).to_not have_key(:minute)
     expect(@forecast).to have_key(:current)
     expect(@forecast[:current]).to be_a(Hash)
 
@@ -32,40 +30,39 @@ RSpec.describe ForecastService do
     expect(@forecast[:current]).to have_key(:feels_like)
     expect(@forecast[:current][:feels_like]).to be_a(Float)
 
-    # expect(@forecast[:current]).to have_key(:pressure)
-    # expect(@forecast[:current][:pressure]).to be_an(Integer)
+    expect(@forecast[:current]).to have_key(:pressure)
+    expect(@forecast[:current][:pressure]).to be_an(Integer)
 
     expect(@forecast[:current]).to have_key(:humidity)
     expect(@forecast[:current][:humidity]).to be_an(Integer)
 
-    # expect(@forecast[:current]).to have_key(:dew_point)
-    # expect(@forecast[:current][:dew_point]).to be_a(Float)
+    expect(@forecast[:current]).to have_key(:dew_point)
+    expect(@forecast[:current][:dew_point]).to be_a(Float)
 
     expect(@forecast[:current]).to have_key(:uvi)
     expect(@forecast[:current][:uvi]).to be_an(Numeric)
 
-    # expect(@forecast[:current]).to have_key(:clouds)
-    # expect(@forecast[:current][:clouds]).to be_an(Integer)
+    expect(@forecast[:current]).to have_key(:clouds)
+    expect(@forecast[:current][:clouds]).to be_an(Integer)
 
     expect(@forecast[:current]).to have_key(:visibility)
     expect(@forecast[:current][:visibility]).to be_an(Integer)
 
-    # expect(@forecast[:current]).to have_key(:wind_speed)
-    # expect(@forecast[:current][:wind_speed]).to be_a(Float)
+    expect(@forecast[:current]).to have_key(:wind_speed)
+    expect(@forecast[:current][:wind_speed]).to be_a(Numeric)
     #
-    # expect(@forecast[:current]).to have_key(:wind_deg)
-    # expect(@forecast[:current][:wind_deg]).to be_an(Integer)
+    expect(@forecast[:current]).to have_key(:wind_deg)
+    expect(@forecast[:current][:wind_deg]).to be_an(Integer)
 
-    # expect(@forecast[:current]).to have_key(:wind_gust)
-    #sometimes theres is no wind_gust and it might change from float to integer.
-    # expect(@forecast[:current][:wind_gust]).to be_a(Float)
-    # expect(@forecast[:current][:wind_gust]).to be_an(Integer)
+    expect(@forecast[:current]).to have_key(:wind_gust)
+    expect(@forecast[:current][:wind_gust]).to be_a(Numeric)
+    expect(@forecast[:current][:wind_gust]).to be_an(Numeric)
 
-    # expect(@forecast[:current][:weather][0]).to have_key(:id)
-    # expect(@forecast[:current][:weather][0][:id]).to be_an(Integer)
+    expect(@forecast[:current][:weather][0]).to have_key(:id)
+    expect(@forecast[:current][:weather][0][:id]).to be_an(Integer)
 
-    # expect(@forecast[:current][:weather][0]).to have_key(:main)
-    # expect(@forecast[:current][:weather][0][:main]).to be_an(String)
+    expect(@forecast[:current][:weather][0]).to have_key(:main)
+    expect(@forecast[:current][:weather][0][:main]).to be_an(String)
 
     expect(@forecast[:current]).to have_key(:weather)
     expect(@forecast[:current][:weather]).to be_a(Array)
@@ -77,8 +74,6 @@ RSpec.describe ForecastService do
     expect(@forecast[:current][:weather][0][:icon]).to be_an(String)
 end
   it 'returns daily forecast data', :vcr do
-      # @forecast = ForecastService.get_all_@forecast('denver,co')
-
     @forecast[:daily].shift(5).each do |day|
       expect(day).to have_key(:dt)
       expect(day[:dt]).to be_an(Integer)
@@ -171,7 +166,6 @@ end
   end
 
   it 'returns hourly forecast data', :vcr do
-    # @forecast = ForecastService.get_all_@forecast('denver,co')
     @forecast[:hourly].shift(8).each do |hour|
 
      expect(hour).to have_key(:dt)
