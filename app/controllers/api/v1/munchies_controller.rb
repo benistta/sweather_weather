@@ -9,5 +9,6 @@ class Api::V1::MunchiesController < ApplicationController
     # require "pry"; binding.pry
     munchie_poro = Munchie.new(destination_city, restaurant, forecast)
     # require "pry"; binding.pry
+    render json: Api::V1::MunchiesSerializer.new(munchie_poro)
   end
 end

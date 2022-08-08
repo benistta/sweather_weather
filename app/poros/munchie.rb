@@ -7,8 +7,16 @@ class Munchie
   def initialize(destination_city, restaurant, forecast)
     @id = nil
     @destination_city = destination_city
-    @forecast = forecast.forecast
-    @restaurant = restaurant.restaurant
+    @forecast = {
+            summary: forecast.conditions,
+            temperature: forecast.temperature
+            # temperature: data[:current][:temp],
+            # summary: data[:current][:weather].first[:description]
+        }
+    @restaurant = {
+            name: restaurant.name,
+            address: restaurant.address
+          }
     # require "pry"; binding.pry
   end
 end
