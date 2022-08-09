@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe YelpService do
   it 'returns restaurant data', :vcr do
-    restaurant = YelpService.find_restaurant('chinese', 'denver,co', 'pueblo,co')
+    restaurant = YelpService.find_restaurant('denver,co', 'chinese')
     # require "pry"; binding.pry
 
     expect(restaurant).to be_a(Hash)

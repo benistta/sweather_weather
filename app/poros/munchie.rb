@@ -4,9 +4,9 @@ class Munchie
               :forecast,
               :restaurant
 
-  def initialize(destination_city, restaurant, forecast)
+  def initialize(location, forecast, restaurant)
     @id = nil
-    @destination_city = destination_city
+    @destination_city = location
     @forecast = {
             summary: forecast.conditions,
             temperature: forecast.temperature
