@@ -9,7 +9,6 @@ RSpec.describe 'Forecast Endpoint' do
 
         results = JSON.parse(response.body, symbolize_names: true)
         # require "pry"; binding.pry
-
         expect(response).to have_http_status(200)
 
         expect(results.keys.count).to eq(1)
@@ -120,17 +119,17 @@ RSpec.describe 'Forecast Endpoint' do
     end
 
 
-  context 'sad path/edge case' do
-    it 'returns data even if location is gobbledegook', :vcr do
-        location = "denver,co"
+  describe 'sad path/edge case' do
+    it 'returns data with different location', :vcr do
+        location = "chicago,il"
         get "/api/v1/forecast?location=#{location}"
 
         results = JSON.parse(response.body, symbolize_names: true)
 
         expect(response).to have_http_status(200)
 
-        expect(results.keys.count).to eq(1)
         expect(results).to have_key(:data)
+        expect(results.keys.count).to eq(1)
         expect(results[:data]).to be_a(Hash)
 
         data = results[:data]
@@ -166,7 +165,7 @@ RSpec.describe 'Forecast Endpoint' do
         expect(current_weather[:sunset]).to be_a(String)
 
         expect(current_weather).to have_key(:temperature)
-        expect(current_weather[:temperature]).to be_a(Float || Integer)
+        expect(current_weather[:temperature]).to be_a(Numeric)
 
         expect(current_weather).to have_key(:feels_like)
         expect(current_weather[:feels_like]).to be_a(Float)
@@ -223,14 +222,17 @@ RSpec.describe 'Forecast Endpoint' do
       end
     end
 
-  xit 'returns an error if location is blank', :vcr do
-        location = ""
+  it 'returns an error if location is blank', :vcr do
+        # headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+        # get "/api/v1/forecast", headers: headers, params: { location: ""}
+        location =""
         get "/api/v1/forecast?location=#{location}"
 
         results = JSON.parse(response.body, symbolize_names: true)
 
-        expect(response).to have_http_status(400)
+        expect(response.status).to have_http_status(400)
         expect(results).to have_key(:data)
+        expect(results).to be_a(Hash)
         expect(results[:data]).to be_a(Hash)
         expect(results[:data]).to eq({})
 
@@ -239,5 +241,6 @@ RSpec.describe 'Forecast Endpoint' do
 
         expect(results).to have_key(:message)
         expect(results[:message]).to eq("Location cannot be blank")
-      end
+    end
+
 end
