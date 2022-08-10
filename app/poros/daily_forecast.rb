@@ -19,10 +19,3 @@ class DailyForecast
 # require "pry"; binding.pry
   end
 end
-# date, in a human-readable format such as “2020-09-30”
-# sunrise, in a human-readable format such as “2020-09-30 06:27:03 -0600”
-# sunset, in a human-readable format such as “2020-09-30 18:27:03 -0600”
-# max_temp, floating point number indicating the maximum expected temperature in Fahrenheit
-# min_temp, floating point number indicating the minimum expected temperature in Fahrenheit
-# conditions, the first ‘description’ field from the weather data as given by OpenWeather
-# icon, string, as given by OpenWeather
