@@ -237,7 +237,7 @@ Request body:
         - Used for retrieving latitude and longitude coordinates for destination, which is then passed into the OpenWeather API
     - Yelp Fusion
       - [Business Search](https://www.yelp.com/developers/documentation/v3/business_search)
-        - Used to search for restaurants at destination city that will be open at time of arrival that matches food/restaurant type selected in request
+        - Used to search for restaurants at city that matches food/restaurant type selected in request
 
 <a name="technologies"></a>  
 ## 7. Technologies
