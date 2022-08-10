@@ -106,7 +106,7 @@ end
       expect(day[:temp][:night]).to be_an(Float)
 
       expect(day[:temp]).to have_key(:eve)
-      expect(day[:temp][:eve]).to be_an(Float)
+      expect(day[:temp][:eve]).to be_an(Numeric)
 
       expect(day[:temp]).to have_key(:morn)
       expect(day[:temp][:morn]).to be_an(Float)
