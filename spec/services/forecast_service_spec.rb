@@ -1,8 +1,5 @@
 require 'rails_helper'
-
 #el base service se testea?
-#se hace un iteration o solo el primero.
-
 RSpec.describe ForecastService do
   before :each do
     @forecast = ForecastService.get_all_forecast('denver,co')
@@ -222,5 +219,22 @@ end
      expect(hour).to have_key(:pop)
      expect(hour[:pop]).to be_a(Numeric)
     end
+  end
+    it 'finds road trip details', :vcr do
+    route = ForecastService.get_roadtrip('denver,co', 'pueblo,co')
+
+    expect(route).to be_a(Hash)
+
+    expect(route).to have_key(:route)
+    expect(route).to be_a(Hash)
+
+    expect(route[:route]).to have_key(:formattedTime)
+    expect(route[:route][:formattedTime]).to be_a(String)
+
+    expect(route[:route]).to have_key(:sessionId)
+    expect(route[:route][:sessionId]).to be_a(String)
+
+    expect(route[:route]).to have_key(:distance)
+    expect(route[:route][:distance]).to be_a(Float)
   end
 end
